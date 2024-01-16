@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Webpage Title</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="toggleSubMenu('course-menu')">Course</a>
+                <ul id="course-menu" class="submenu">
+                    <li><a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">Kurose & Ross Book</a></li>
+                    <li><a href="http://w3schools.com">W3Schools</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/web-development/">GeeksforGeeks</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="toggleSubMenu('browser-menu')">Browser</a>
+                <ul id="browser-menu" class="submenu">
+                    <li><a href="javascript:displayNavigatorInfo()">Navigator Info</a></li>
+                    <li><a href="javascript:displayWindowInfo()">Window Info</a></li>
+                    <li><a href="javascript:displayScreenInfo()">Screen Info</a></li>
+                    <li><a href="javascript:displayLocationInfo()">Location Info</a></li>
+                    <li><a href="javascript:displayGeolocation()">Geolocation</a></li>
+                </ul>
+            </li>
+            <li><a href="#about-section">About</a></li>
+        </ul>
+    </nav>
+
+    <section id="browserInfo">
+        <li>Browser inner window width: 935px</li>
+        <li>Browser inner window height: 746px</li>
+    </section>
+
+    <section id="about-section">
+        <h2>About Me</h2>
+        <p>Hi my name is Zicheng.</p>
+        <!-- Optional: Insert your photo here -->
+        <form action="your-form-submission-link" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <script>
+       displayBrowserInfo();
+    </script>
+</body>
+</html>
+
